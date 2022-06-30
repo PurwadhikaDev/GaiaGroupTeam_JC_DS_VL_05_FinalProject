@@ -92,6 +92,33 @@ Hal ini juga kita sadari bahwa pada target data kita nantinya (response) memilik
 <a id="Conclusion-and-Recommendation"></a> 
 ## Conclusion and Recommendation
 ### Conclusion
+Setelah dilakukan berbagai proses, didapatkan model terahir hasil:
+<img src="pictures/final.png" alt="Final Classification Report"/><br>
+
+Berdasarkan hasil classification report dari model kita, kita dapat menyimpulkan bahwa jika seandainya nanti kita menggunakan model kita untuk memfilter calon customer yang akan mendapatkan response yes, maka model kita dapat memprediksi response yes sebanyak 93% dari keseluruhan calon customer yang sebenarnya mendapatkan response yes dan mengurangi 90% calon customer yang mendapatkan response no untuk kita tidak approach (recall). 
+
+Model kita ini memiliki ketepatan untuk memprediksi response yes sebesar 61% (precisionnya). Jadi apabila kita memprediksi bahwa calon customer akan mendapatkan response yes, maka kemungkinan tebakan benarnya sebesar 61% kurang lebih. Tetapi sebenarnya masih akan ada response calon customer yang sebenarnya mendapatkan response no namun diprediksi sebagai calon customer yang mendapatkan response yes sekitar 10% dari keseluruhan calon customer yang mendapatkan response no (berdasarkan recall).
+
+Bila seandainya biaya untuk approach per calon customer  itu 1$. Dan andaikan jumlah calon customer yang kita miliki untuk suatu kurun waktu sebanyak 200 orang (dimana andaikan 100 orang memiliki response yes, dan 100 orang lagi mendapatkan response no), maka perbandingannya kurang lebih akan seperti ini :
+
+Tanpa Model (semua kandidat kita check dan tawarkan) :
+
+Total Biaya => 200 x 1 USD = 200 USD  
+Total calon customer dengan response yes => 100 orang (karena semua kita tawarkan)  
+Total calon customer dengan response yes namun tidak didapatkan => 0 orang (karena semua kita tawarkan)  
+Total calon customer dengan response no => 100  
+Biaya yang terbuang => 100 x 1 USD = 100 USD (karena 100 orang menolak dan menjadi sia-sia)  
+Jumlah penghematan => 0 USD  
+
+Dengan Model (hanya kandidat yang diprediksi oleh model tertarik yang kita check dan tawarkan) :
+
+Total Biaya => (93 x 1 USD) + (10 x 1 USD) = 93 USD + 10 USD = 103 USD  
+Total calon customer dengan response yes => 93 orang (karena recall 1 response yes 93%)  
+Total calon customer dengan response yes namun di predisksi no => 7 orang (karena recall 1  response no 93%)  
+Biaya yang terbuang => 10 x 1 USD = 10 USD (berdasarkan recall 0 response yes)  
+Jumlah penghematan => 90 x 1 USD = 90 USD (yang dihitung pure hanya yang response no)
+
+Berdasarkan contoh hitungan tersebut, terlihat bahwa dengan menggunakan model kita, maka perusahaan tersebut akan menghemat biaya yang cukup besar 90/200 atau sebanyak 45% pengeluaran marketing tanpa mengorbankan terlalu banyak jumlah calon customer yang mendapatkan response yes (yang dihitung pure hanya yang response no).
 
 ### Recommendation
 Hal-hal yang bisa dilakukan untuk mengembangkan project dan modelnya lebih baik lagi :
