@@ -6,13 +6,11 @@ by [Abdul Kadir Syahab](https://github.com/SyahabKadir//), [Alaniah Nisrina](htt
 - [Business Understanding](#business-understanding)
 - [Data Understanding](#data-understanding)
 - [Exploratory Data Analysis](#Exploratory-Data-Analysis)
-- [Preprocessing](#Preprocessing)
-- [Methodology (Modeling/Analysis)](#Methodology-(Modeling/Analysis))
 - [Conclusion and Recommendation](#Conclusion-and-Recommendation)
 ---
 
 <a id="business-understanding"></a> 
-## 1. Business Understanding
+## Business Understanding
 ### Context
 Sebuah perusahaan vehicle insurance yang bertempat di wialayah Amerika Serikat bagian barat ingin memprediksi customer baru yang tertarik dengan produk asuransi mereka. Dimana calon customer tersebut di-approach dengan berbagai cara oleh perusahaan. Setelah banyak calon customer yang tertarik dan ingin membeli policy yang ditawarkan oleh tim sales & marketing, ternyata beberapa calon customer baru yang tidak relavan dengan preliminary yang telah dibuat oleh perusahaan. Melihat hal ini, tentunya akan merugikan perusahaan apabila calon customer tersebut tidak mampu untuk membayar premi per bulan kedepannya. Dari hal tersebut, maka perusahaan harus menyeleksi calon customer dengan response yes dan no kepada calon customer, apakah calon customer tersebut dianggap layak untuk membeli policy atau tidak. Oleh sebab itu perusahaan ingin mengetahui calon customer yang mana yang layak dan benar-benar mampu untuk membeli policy dan membayar premi per bulannya. Hal ini dilakukan untuk menjadi sebuah efektivitas dalam memilih calon customer dimana tentunya akan mengurangi waktu yang dibutuhkan dan biaya yang dikeluarkan oleh tim marketing. Di dalam database perusahaan ini, terdapat informasi mengenai demografi, pendidikan, income customer dll.
 
@@ -49,7 +47,7 @@ Dari hal tersebut, metric utama yang akan kita gunakan adalah `Accuracy` dan `Re
 ---
 
 <a id="data-understanding"></a> 
-## 2. Data Understanding
+## Data Understanding
 *[Data Source : Vehicle Insurance Customer Data](https://www.kaggle.com/datasets/ranja7/vehicle-insurance-customer-data)*
 - Dataset diambil dari salah satu perusahaan Vehicle Insurance di Amerika Serikat tahun 2011
 - Sebagian besar fitur bersifat kategori (Nominal, Ordinary, Binary), dengan beberapa fitur mempunyai kardinalitas yang tinggi
@@ -85,20 +83,14 @@ Dari hal tersebut, metric utama yang akan kita gunakan adalah `Accuracy` dan `Re
 | Vehicle Size | Object  | A type of size vehicle that insuranced |
 
 <a id="Exploratory-Data-Analysis"></a> 
-## 3. Exploratory Data Analysis
+## Data Analysis
 <img src="pictures/responses.png" alt="Distribution of Response"/><br>
 Berdasarkan data yang kita punya, hanya 1308 dari 9134 calon customer (14.32%) yang mendapat response yes dari perusahaan. Dilirik dari sisi bisnis, kemungkinan banyak variable-variable yang menjadi pertimbangan company untuk menerima applicant dari calon customer mereka.
 
 Hal ini juga kita sadari bahwa pada target data kita nantinya (response) memiliki `imbalance` data. Hal ini perlu kita jadikan perhatian dan proses pada tahap selanjutnya (Preprocessing).
 
-<a id="Preprocessing"></a> 
-## 4. Preprocessing
-
-<a id="Methodology-(Modeling/Analysis)"></a> 
-## 5. Methodology (Modeling/Analysis)
-
 <a id="Conclusion-and-Recommendation"></a> 
-## 6. Conclusion and Recommendation
+## Conclusion and Recommendation
 ### Conclusion
 
 ### Recommendation
