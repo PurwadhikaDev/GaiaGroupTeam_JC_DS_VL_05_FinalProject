@@ -68,7 +68,10 @@ Kemudian juga kita akan membuat machine learning dengan model klasifikasi yang a
 
 <a id="Exploratory-Data-Analysis"></a> 
 ## 3. Exploratory Data Analysis
-<img src="oictures/responses.png" alt="Distribution of Response"/><br>
+<img src="pictures/responses.png" alt="Distribution of Response"/><br>
+Berdasarkan data yang kita punya, hanya 1308 dari 9134 calon customer (14.32%) yang mendapat response yes dari perusahaan. Dilirik dari sisi bisnis, kemungkinan banyak variable-variable yang menjadi pertimbangan company untuk menerima applicant dari calon customer mereka.
+
+Hal ini juga kita sadari bahwa pada target data kita nantinya (response) memiliki `imbalance` data. Hal ini perlu kita jadikan perhatian dan proses pada tahap selanjutnya (Preprocessing).
 
 <a id="Preprocessing"></a> 
 ## 4. Preprocessing
