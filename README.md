@@ -30,6 +30,24 @@ Dari isu yang telah digambarkan diatas, kita akan menganalisis data perusahaan y
 
 Kemudian juga kita akan membuat machine learning dengan model klasifikasi yang akan membantu perusahaan untuk dapat memprediksi probabilitas seorang calon customer yang layak dan benar-benar mampu untuk membeli policy dan membayar premi per bulannya sehingga mendapatkan response yes dan no dari perusahaan.
 
+### Evaluation Metric
+<img src="pictures/confusion_matrix.jpeg" alt="Confusion Matrix"/><br>
+- Type 1 error : False Positive  
+Konsekuensi : Perusahaan berpotensi kehilangan nasabah dikarenakan calon customer sulit untuk membayar sehingga perusahaan akan kehilangan waktu, sumber daya dan biaya approach calon customer
+
+- Type 2 error : False Negative  
+Konsekuensi : Perusahaan kehilangan calon customer yang potensial
+
+Berdasarkan konsekuensi diatas, maka seharusnya yang kita lakukan adalah membuat model yang dapat mengurangi false negative sehingga perusahaan kekurangan (kehilangan) calon customer yang potensial. Hal ini dikarenakan jika terjadi Type 1 error, perusahaan dapat mencabut hak claim calon customer yang tidak dapat membayar premi (menunggak). Namun juka terjadi Type 2 error, maka perusahaan akan sangat merugi dikarenakan kehilangan 100% pendapatan dari calon customer yang potensial.
+
+Oleh karena itu yang harus kita lakukan adalah membuat model dengan tipe :
+- Accuracy : Rasio prediksi Benar (positif dan negatif) dengan keseluruhan data (berapa persen calon customer yang benar diprediksi mendapatkan response yes dan tidak mendapatkan response yes dari keseluruhan calon customer?)
+- Recall : Rasio prediksi benar positif dibandingkan dengan keseluruhan data yang benar positif (berapa persen calon customer yang diprediksi mendapatkan response yes dari keseluruhan calon customer yang sebenarnya mendapatkan response yes?)
+
+Dari hal tersebut, metric utama yang akan kita gunakan adalah `Accuracy` dan `Recall`.
+
+---
+
 <a id="data-understanding"></a> 
 ## 2. Data Understanding
 *[Data Source : Vehicle Insurance Customer Data](https://www.kaggle.com/datasets/ranja7/vehicle-insurance-customer-data)*
